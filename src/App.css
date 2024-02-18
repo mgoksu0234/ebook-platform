@@ -1,0 +1,765 @@
+
+@font-face {
+    font-family: 'Hubballi';
+    src: local('Hubballi'), url(./fonts/Hubballi-Regular.ttf) format('truetype');
+
+}
+@font-face {
+    font-family: 'Gothic';
+    src: local('Gothic'), url(./fonts/GothicA1/GothicA1-Regular.ttf) format('truetype');
+
+}
+
+html{
+    background-color: #E7F8FF;
+}
+
+
+body{
+    margin:0 10px;
+    padding:0
+
+}
+
+
+.publisher-name{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 24px;
+    margin: 18px;
+    font-family: Hubballi;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background: #46ABD7;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.info-card-wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.info-card-total{
+    display: flex;
+    margin: 0px 65px;
+    padding: 20px;
+    width: 423px;
+    height: 162px;
+    background: #FF4342;
+    color: white;
+    font-family: 'Gothic';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    border-radius: 50px;
+}
+
+.info-card-value-container{
+    font-family: 'Gothic';
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+    width: 45px;
+}
+
+.info-card-value{
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+}
+
+
+
+.top-read-text{
+    margin: 30px 18px;
+    font-family: 'Gothic';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+}
+
+.top-books-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.card-wrapper{
+    margin: 0 20px;
+    background: #4ACBFF;
+    color: white;
+    width: 429px;
+    height: 225px;
+    display: flex;
+    border-radius: 29px;
+}
+
+.book-title-column{
+    font-family: 'Gothic';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    width: 50%;
+    padding-left: 15px;
+}
+
+.book-title-text{
+    padding-top: 81px;
+    padding-bottom: 33px;
+    height: 76px;
+}
+
+.view-license-text{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #FF4342;
+}
+
+.detail-column{
+    padding: 17px 0;
+}
+
+.total-title{
+    font-family: 'Gothic';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.total-value{
+    font-family: 'Gothic';
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 80px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.button-section{
+    text-align: center;
+    margin: 50px;
+}
+
+.button-offer-license{
+    height: 95px;
+    width: 464px;
+    border-radius: 27px;
+    background: #214780;
+    color: white;
+    font-family: 'Gothic';
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* PopUp Offer License */
+
+.popup-box{
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 10;
+    left: 0;
+}
+
+.popup-box-outside-library{
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    left: 0;
+}
+   
+.box {
+    position: relative;
+    width: 418px;
+    margin: 0 auto;
+    height: 571px;
+    margin-top: calc(100vh - 85vh - 50px);
+    background: #4ACBFF;
+    border-radius: 25px;
+    padding: 20px;
+    overflow: auto;
+}
+   
+.close-icon {
+    content: 'x';
+    cursor: pointer;
+    position: fixed;
+    right: calc(34%);
+    top: calc(100vh - 85vh - 63px);
+    background: #ff4342;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    line-height: 27px;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+
+.offer-title{
+    font-family: Gothic;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+
+.form-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 38px;
+}
+.form-input-name{
+    color: white;
+    font-family: 'Gothic';
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    height: 46px;
+    width: 109px;
+    padding-bottom: 40px;
+
+}
+
+.form-input-seperator{
+    font-family: 'Gothic';
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+
+input[type="text"]
+{
+    font-size:24px;
+}
+
+
+input[type=text]:focus{
+    outline: 2px solid #FF4342;     /* oranges! yey */
+  }
+.input-license{
+    height: 52px;
+    width: 212px;
+    border-radius: 4px;
+    border: none;
+}
+
+.popup-offer-button{
+    height: 39px;
+    border-radius: 27px;
+    background: #214780;
+    height: 52px;
+    width: 232px;
+    border-radius: 8px;
+    color: white;
+    font-family: Gothic A1;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: 'Gothic';
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+}
+
+.input[type="file"] {
+    display: none;
+}
+.input-license-file{
+    display: none;
+}
+
+.file-input-wrapper{
+    margin-left: -31px;
+}
+
+.file-input-container{
+    width: 124px;
+    height: 52px;
+    background: #FF4342;
+    border-radius: 4px;
+    font-family: Gothic;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 47px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    -webkit-user-select: none;
+    user-select: none;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+}
+
+.offer-license-result{
+    margin: 30px;
+}
+
+
+
+/* Platform */
+
+.license-moderation-container{
+    width: 1324px;
+    height: 532px;
+    background: #4ACBFF;
+    border-radius: 30px;
+    margin: 30px auto;
+    padding-top: 24px;
+}
+
+.license-type-container{
+    display: flex;
+    width: 999px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.license-type-element{
+    font-family: Gothic;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.active-text{
+    color: #FF4342;
+}
+
+.license-type-separator{
+    width: 1133px;
+    background: white;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 auto 53px auto;
+}
+
+.license-detail-wrapper{
+    height: 356px;
+    width: 1155px;
+    margin: auto;
+    overflow-y: scroll;
+}
+.license-detail-wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+.license-detail-wrapper::-webkit-scrollbar-track {
+    background-color: #4ACBFF;
+  }
+
+  .license-detail-wrapper::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 20px rgb(255 255 255);
+  }
+.license-detail-container{
+    background: white;
+    margin: 0px auto 40px auto;
+    height: 152px;
+    width: 1109px;
+    border-radius: 23px;
+    display: flex;
+
+}
+.license-logo{
+    width: 8.6%;
+    padding-top: 45px;}
+
+.license-logo > div{
+    background: url(./icons/license-Logo.svg) no-repeat center;
+    width: 53px;
+    height: 51px;
+    background-size: contain;
+    margin: auto;
+    opacity: 0.4;
+}
+
+.license-element{
+    width: 18%;
+    padding-top: 39px;
+}
+
+.element-title{
+    font-family: Gothic;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#FF4342
+
+}
+
+.element-separator{
+    height: 3px;
+    border-radius: 2px;
+    width: 125px;
+    margin: auto;
+    background: #FF4342;
+}
+
+.element-value{
+    text-align: center;
+    font-family: 'Gothic';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 51px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.approve-reject-container{
+    margin: 35px auto;
+    text-align: center;
+}
+.approve-button{
+    width: 70px;
+    border: none;
+    background: green;
+    color: white;
+    font-family: 'Gothic';
+    font-size: 16px;
+    border-radius: 5px;
+    height: 33px;
+    cursor: pointer;
+    font-weight: 800;
+}
+.reject-button{
+    width: 70px;
+    border: none;
+    background: red;
+    color: white;
+    font-family: 'Gothic';
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 22px;
+    height: 33px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+/* User */
+.user-body{
+    margin: 46px;
+}   
+
+.title-book-show{
+    font-family: Gothic;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+    margin: 25px 0px;
+
+}
+.bookshelf{
+    display: flex;
+}
+
+.book{
+    position: relative;
+    height: 244px;
+    margin: 0 30px;
+    width: 175px;
+    border-radius: 17px;
+    background-color: #46ABD7; 
+}
+
+.book-name{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    font-family: Gothic;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+.buy-book-container{
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background: #00000059;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    bottom: 0px;
+    text-align: center;
+    transition: height 1s;
+}
+.buy-book-container-active{
+    height: 30%;
+}
+
+.buy-button{
+    border: none;
+    width: 122px;
+    height: 39px;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    transition: opacity 200ms, display 200ms;
+    display: none;
+    margin: 16px auto;
+    opacity: 0;
+    cursor: pointer;
+    font-family: Gothic;
+    font-size: 20px;
+    font-weight: 800;
+}
+.buy-button-active{
+    display: block;
+    opacity: 1;
+}
+
+.red{
+    background-color: #FF4342;
+}
+
+.blue{
+    background-color: #4ACBFF;
+}
+
+.navy{
+    background-color: #214780;
+}
+
+
+/* Login */
+
+.login-container{
+    height: 517px;
+    width: 418px;
+    border-radius: 26px;
+    background: #4ACBFF;
+    margin: 100px auto;
+    padding: 30px;
+}
+
+.login-title{
+    color: white;
+    font-family: Gothic;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+.metamask-box{
+    text-align: center;
+    margin-top: 100px;
+}
+.metamask-box > button > div{
+    background: url("./icons/MetaMask_Fox.svg") no-repeat;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    bottom: 5px;
+}
+
+.metamask-box > button{
+    background: white;
+    border: solid 2px #FF4342;
+    border-radius: 10px;
+    height: 45px;
+    width: 200px;
+    font-family: Gothic;
+    position: relative;
+    font-size: 16px;
+    font-weight: 900;
+    padding-left: 34px;
+    color: #214780;
+    cursor: pointer;
+}
+
+.publisher-box-container{
+    height: 489px;
+    width: 846px;
+    background: #4ACBFF;
+    border-radius: 26px;
+    margin: 50px auto;
+    display: flex;
+}
+.publisher-box-col1{
+    width: 30%;
+    padding: 27px;
+}
+
+.publisher-box-col2{
+    margin-top: 30px;
+    width: 63%;
+}
+
+.publisher-title-text{
+    font-family: 'Gothic';
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    margin-top: 180px;
+    margin-bottom: 30px;
+
+}
+.add-publisher-button{
+    height: 69px;
+    width: 165px;
+    border-radius: 11px;
+    background: #FF4342;
+    font-family: Gothic;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.publisher-element-wrapper{
+    height: 432px;
+    overflow-y: scroll;
+}
+.publisher-element-wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+.publisher-element-wrapper::-webkit-scrollbar-track {
+    background-color: #4ACBFF;
+}
+
+.publisher-element-wrapper::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 20px rgb(255 255 255);
+}
+
+.publisher-element{
+    height: 88px;
+    width: 503px;
+    border-radius: 23px;
+    background: white;
+    margin-bottom: 20px;
+    display: flex;
+
+}
+
+.element-publisher-info{
+    margin-top: 10px;
+    margin-left: 17px;
+    width: 78%; 
+}
+
+.element-publisher-name{
+    font-family: 'Gothic';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FF4342;
+    margin-bottom: 5px;
+}
+
+.element-publisher-number{
+    font-family: 'Gothic';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.element-publisher-trash{
+    margin:auto;
+}
+
+.trash-logo{
+    background: url(./icons/trash.svg) no-repeat center;
+    width: 53px;
+    height: 51px;
+    background-size: contain;
+    margin: auto;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+.publisher-name-input{
+    font-size: 24px;
+    height: 34px;
+    width: 207px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.publisher-number-input{
+    font-size: 24px;
+    height: 34px;
+    width: 207px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.add-publisher-form{
+    height: 35px;
+    width: 165px;
+    border-radius: 11px;
+    border: none;
+    color: white;
+    background: #FF4342;
+    font-family: 'Gothic';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
